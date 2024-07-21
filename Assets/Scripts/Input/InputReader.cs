@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static Controls;
 using System;
+using UnityEditor.PackageManager;
 
 [CreateAssetMenu(fileName = "New Input Reader", menuName = "Input/Input Reader")]
 public class InputReader : ScriptableObject, IPlayerActions
@@ -29,6 +30,10 @@ public class InputReader : ScriptableObject, IPlayerActions
         if (context.performed)
         {
             MoveEvent?.Invoke(context.ReadValue<Vector2>());
+        }
+        else if (context.canceled)
+        {
+            MoveEvent?.Invoke(Vector2.zero);
         }
     }
 
