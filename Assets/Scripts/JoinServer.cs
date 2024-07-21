@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class JoinServer : MonoBehaviour
 {
+
+   public void StartHost()
+   {
+      NetworkManager.Singleton.StartHost();
+   }
    public void Join()
    {
         NetworkManager.Singleton.StartClient();

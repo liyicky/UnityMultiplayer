@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972529993028160739}
-  - component: {fileID: 3813772198145740280}
+  - component: {fileID: 7069131158739785151}
   m_Layer: 0
   m_Name: TurretPivot
   m_TagString: Untagged
@@ -117,7 +117,7 @@ Transform:
   - {fileID: 8990226920376954112}
   m_Father: {fileID: 5127026181858586975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3813772198145740280
+--- !u!114 &7069131158739785151
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5891525546402123444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 14c364bf48095463ab53ad352c175368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5127026181858586975}
   - component: {fileID: 7175892185770209992}
-  - component: {fileID: 5089472503134686826}
+  - component: {fileID: -2179722746758123912}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -288,7 +288,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &5089472503134686826
+--- !u!114 &-2179722746758123912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8568987806325855336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 14c364bf48095463ab53ad352c175368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -329,8 +329,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5208860300704611299}
   - component: {fileID: 3297071079652310453}
-  - component: {fileID: 6288119839241027219}
   - component: {fileID: 500341756341553632}
+  - component: {fileID: 6324871570545777491}
   m_Layer: 0
   m_Name: TankTreads
   m_TagString: Untagged
@@ -406,37 +406,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6288119839241027219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8893237309318651826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseUnreliableDeltas: 0
-  SyncPositionX: 0
-  SyncPositionY: 0
-  SyncPositionZ: 0
-  SyncRotAngleX: 0
-  SyncRotAngleY: 0
-  SyncRotAngleZ: 1
-  SyncScaleX: 0
-  SyncScaleY: 0
-  SyncScaleZ: 0
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  UseQuaternionSynchronization: 0
-  UseQuaternionCompression: 0
-  UseHalfFloatPrecision: 0
-  InLocalSpace: 0
-  Interpolate: 1
-  SlerpPosition: 0
 --- !u!61 &500341756341553632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -482,3 +451,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.765625, y: 2.0546875}
   m_EdgeRadius: 0
+--- !u!114 &6324871570545777491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893237309318651826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c364bf48095463ab53ad352c175368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseUnreliableDeltas: 0
+  SyncPositionX: 0
+  SyncPositionY: 0
+  SyncPositionZ: 0
+  SyncRotAngleX: 0
+  SyncRotAngleY: 0
+  SyncRotAngleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  UseQuaternionSynchronization: 0
+  UseQuaternionCompression: 0
+  UseHalfFloatPrecision: 0
+  InLocalSpace: 0
+  Interpolate: 1
+  SlerpPosition: 0
