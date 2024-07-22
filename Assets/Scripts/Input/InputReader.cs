@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static Controls;
 using System;
-using UnityEditor.PackageManager;
 
 [CreateAssetMenu(fileName = "New Input Reader", menuName = "Input/Input Reader")]
 public class InputReader : ScriptableObject, IPlayerActions
