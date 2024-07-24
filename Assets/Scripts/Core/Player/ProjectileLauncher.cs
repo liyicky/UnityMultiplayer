@@ -53,9 +53,9 @@ public class ProjectileLauncher : NetworkBehaviour
         if (!shouldFire) { return; }
         if (Time.time < (1 / fireRate) + previousFireTime) { return; }
 
-        previousFireTime = Time.time;
         PrimaryFireServerRpc(spawnPoint.position, spawnPoint.up);
         SpawnDummyProjectile(spawnPoint.position, spawnPoint.up);
+        previousFireTime = Time.time;
     }
 
     private void SpawnDummyProjectile(Vector3 spawnPos, Vector3 direction)
@@ -88,6 +88,11 @@ public class ProjectileLauncher : NetworkBehaviour
         Physics2D.IgnoreCollision(playerCollider, projectileInstance.GetComponent<Collider2D>());
 
         SpawnDummyProjectileClientRpc(spawnPoint.position, spawnPoint.up);
+
+        if (projectileInstance.TryGetComponent<DealDamageOnContact>(out DealDamageOnContact dealDamage))
+        {
+            dealDamage.SetOwner(this.OwnerClientId);
+        }
 
         if (projectileInstance.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
         {
