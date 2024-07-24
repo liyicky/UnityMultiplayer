@@ -33,8 +33,6 @@ public class DealDamageOnContact : MonoBehaviour
 
         if (other.attachedRigidbody.TryGetComponent<Health>(out Health otherHealth))
         {   
-            if (otherOwnerClientId == null) { return; }
-
             Debug.Log(ownerClientId + "dealth " + damagePerAttack + "to " + otherOwnerClientId);
             otherHealth.TakeDamage(damagePerAttack);
         }
